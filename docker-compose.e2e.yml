@@ -1,0 +1,7 @@
+services:
+  e2e:
+    build: .
+    ipc: host
+    environment:
+      CI: "true"
+      HOME: /root
