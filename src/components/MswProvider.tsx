@@ -34,7 +34,7 @@ export function MswProvider({ children }: { children: ReactNode }) {
       started.current = (async () => {
         const { worker } = await import("@/mocks/browser");
         await worker.start({
-          onUnhandledRequest: "bypass",
+          onUnhandledFrame: "bypass",
           quiet: true,
           serviceWorker: { url: "/mockServiceWorker.js" },
         });
